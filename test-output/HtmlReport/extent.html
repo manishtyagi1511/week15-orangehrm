@@ -1,0 +1,1230 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">orangrhrm Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jun 25, 2024 11:15:13 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jun 25, 2024 11:15:13 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jun 25, 2024 11:16:02 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='50%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='40%'><b>2</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='60%'><b>3</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='49%'><b>29</b> steps passed</small></div>
+<div>
+<small data-tooltip='10%'><b>6</b> steps failed,
+<b>24</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Login feature":17.726,"User Feature":30.5
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@sanity</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>@smoke</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@author_Manish</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>40%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Engineer</td>
+<td>Manish tyagi </td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Nop commerce</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 2,
+failChild: 3,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 29,
+failGrandChild: 6,
+warningGrandChild: 0,
+skipGrandChild: 24,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@sanity</a><a class="dropdown-item" href="#">@smoke</a><a class="dropdown-item" href="#">@author_Manish</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login feature</p>
+            <p class="text-sm">
+              <span>23:15:14</span> / <span>00:00:17:726</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login feature</h5>
+<span class='badge badge-success'>06.25.2024 23:15:14</span>
+<span class='badge badge-danger'>06.25.2024 23:15:31</span>
+<span class='badge badge-default'>00:00:17:726</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to perfrom successful login as a user I have to enter correct username and password</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>verify that the logo display on homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(java.lang.String)">
+                <span>When I enter email "Admin" in email field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterPasswordInPasswordField(java.lang.String)">
+                <span>And I enter password "admin123" in password field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iClickOnLoginButton()">
+                <span>And I click on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.theLogoIsDisplayedSuccessfully()">
+                <span>Then the logo is displayed successfully</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>verify the user should logout successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(java.lang.String)">
+                <span>When I enter email "Admin" in email field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterPasswordInPasswordField(java.lang.String)">
+                <span>And I enter password "admin123" in password field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iClickOnLoginButton()">
+                <span>And I click on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iClickOnUserPrfileLogo()">
+                <span>And I click on  user prfile logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iMouseHoverAndClickOnLogoutButton()">
+                <span>And I mouse hover and click on logout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iShouldLogOutSuccessfully()">
+                <span>Then I should log out successfully</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">User Feature</p>
+            <p class="text-sm">
+              <span>23:15:31</span> / <span>00:00:30:500</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">User Feature</h5>
+<span class='badge badge-success'>06.25.2024 23:15:31</span>
+<span class='badge badge-danger'>06.25.2024 23:16:02</span>
+<span class='badge badge-default'>00:00:30:500</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to perform successful operation as a admin has to perform certain operations</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="21"><span class="badge log fail-bg mr-2">Fail</span>Admin should add user successfully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(java.lang.String)">
+                <span>When I enter email "Admin" in email field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterPasswordInPasswordField(java.lang.String)">
+                <span>And I enter password "admin123" in password field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iClickOnLoginButton()">
+                <span>And I click on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnAdminButton()">
+                <span>And I click on admin button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldReachAdminPageSuccessfully()">
+                <span>And I should reach admin page successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnAddButton()">
+                <span>And I click on add button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldReachAddOptionSuccessfully()">
+                <span>And I should reach add option successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iSelectTheUserRole(java.lang.String)">
+                <span>And I select the user role"Admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterEmployeeName(java.lang.String)">
+                <span>And I enter employee name "Ranga Akunuri"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iSelectStatus(java.lang.String)">
+                <span>And I select status "Disabled"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterUsername(java.lang.String)">
+                <span>And I enter username "rupaani"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterThePassword(java.lang.String)">
+                <span>And I enter the password"prime123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterConfirmPassword(java.lang.String)">
+                <span>And I enter confirm Password"prime123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnSaveButton()">
+                <span>And I click on save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldSavedUserSuccessfully()">
+                <span>Then I should saved user successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.116)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a04aebe2fb74db12b10282629fd9e84f, findElement {using=xpath, value=//p[@class='oxd-text oxd-text--p oxd-text--toast-message oxd-toast-content-text']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\prach\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50405}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50405/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a04aebe2fb74db12b10282629fd9e84f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.getTextFromElement(Utility.java:59)
+	at com.orangehrmlive.demo.pages.AddUserPage.getSavedMessage(AddUserPage.java:142)
+	at com.orangehrmlive.demo.steps.UserTest.iShouldSavedUserSuccessfully(UserTest.java:71)
+	at ✽.I should saved user successfully(file:///C:/Users/prach/IdeaProjects/orangehrmlive-sw-wk-15-manish-tyagi/src/test/resources/features/usertest.feature:37)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.116)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a04aebe2fb74db12b10282629fd9e84f, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\prach\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50405}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50405/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a04aebe2fb74db12b10282629fd9e84f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at com.orangehrmlive.demo.utility.Utility.getScreenShot(Utility.java:351)
+	at com.orangehrmlive.demo.steps.Hooks.tearDown(Hooks.java:22)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log fail-bg mr-2">Fail</span>search the user created and verify it</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(java.lang.String)">
+                <span>When I enter email "Admin" in email field</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.116)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [190b1b54b952a7e602665fb78d96feb2, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\prach\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50435/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 190b1b54b952a7e602665fb78d96feb2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:70)
+	at com.orangehrmlive.demo.pages.LoginPage.enterEmailId(LoginPage.java:39)
+	at com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(LoginTest.java:19)
+	at ✽.I enter email "Admin" in email field(file:///C:/Users/prach/IdeaProjects/orangehrmlive-sw-wk-15-manish-tyagi/src/test/resources/features/usertest.feature:54)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterPasswordInPasswordField(java.lang.String)">
+                <span>And I enter password "admin123" in password field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginTest.iClickOnLoginButton()">
+                <span>And I click on login button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnAdminButton()">
+                <span>And I click on admin button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldReachAdminPageSuccessfully()">
+                <span>And I should reach admin page successfully</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterUsername(java.lang.String)">
+                <span>And I enter username "rupaani"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iSelectTheUserRole(java.lang.String)">
+                <span>And I select the user role"Admin"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterEmployeeName(java.lang.String)">
+                <span>And I enter employee name "Ranga Akunuri"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iSelectStatus(java.lang.String)">
+                <span>And I select status "Disabled"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnSearchButton()">
+                <span>And I click on search button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldCheckUserShouldInResults()">
+                <span>Then I should check user should in results</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.116)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [190b1b54b952a7e602665fb78d96feb2, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\prach\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50435/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 190b1b54b952a7e602665fb78d96feb2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at com.orangehrmlive.demo.utility.Utility.getScreenShot(Utility.java:351)
+	at com.orangehrmlive.demo.steps.Hooks.tearDown(Hooks.java:22)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log fail-bg mr-2">Fail</span>verify that admin should delete the user successfully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginTest.iAmOnHomepage()">
+                <span>Given I am on homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(java.lang.String)">
+                <span>When I enter email "Admin" in email field</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.116)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00340f6a72548234951cf0a46ce6a983, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\prach\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50449}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50449/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00340f6a72548234951cf0a46ce6a983
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
+	at com.orangehrmlive.demo.utility.Utility.sendTextToElement(Utility.java:70)
+	at com.orangehrmlive.demo.pages.LoginPage.enterEmailId(LoginPage.java:39)
+	at com.orangehrmlive.demo.steps.LoginTest.iEnterEmailInEmailField(LoginTest.java:19)
+	at ✽.I enter email "Admin" in email field(file:///C:/Users/prach/IdeaProjects/orangehrmlive-sw-wk-15-manish-tyagi/src/test/resources/features/usertest.feature:84)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginTest.iEnterPasswordInPasswordField(java.lang.String)">
+                <span>And I enter password "admin123" in password field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.LoginTest.iClickOnLoginButton()">
+                <span>And I click on login button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnAdminButton()">
+                <span>And I click on admin button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldReachAdminPageSuccessfully()">
+                <span>And I should reach admin page successfully</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterUsername(java.lang.String)">
+                <span>And I enter username "rupaani"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iSelectTheUserRole(java.lang.String)">
+                <span>And I select the user role"Admin"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iEnterEmployeeName(java.lang.String)">
+                <span>And I enter employee name "Ranga Akunuri"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iSelectStatus(java.lang.String)">
+                <span>And I select status "Disabled"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnSearchButton()">
+                <span>And I click on search button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldCheckUserShouldInResults()">
+                <span>And I should check user should in results</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnCheckButton()">
+                <span>And I click on check button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnDeleteButton()">
+                <span>And I click on delete button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iClickOnPopupDisplay()">
+                <span>And I click on popup display</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserTest.iShouldSuccessfullyDeletedTheUser()">
+                <span>Then I should successfully deleted the user</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" title="AFTER">
+                <span>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.116)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00340f6a72548234951cf0a46ce6a983, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\prach\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50449}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50449/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00340f6a72548234951cf0a46ce6a983
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at com.orangehrmlive.demo.utility.Utility.getScreenShot(Utility.java:351)
+	at com.orangehrmlive.demo.steps.Hooks.tearDown(Hooks.java:22)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@sanity</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@sanity</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:15:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>verify that the logo display on homepage</a>
+<div class="">
+<span class="badge badge-default">Login feature.verify that the logo display on homepage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:15:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>verify the user should logout successfully</a>
+<div class="">
+<span class="badge badge-default">Login feature.verify the user should logout successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='21'>Admin should add user successfully</a>
+<div class="">
+<span class="badge badge-default">User Feature.Admin should add user successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='40'>search the user created and verify it</a>
+<div class="">
+<span class="badge badge-default">User Feature.search the user created and verify it</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:16:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='55'>verify that admin should delete the user successfully</a>
+<div class="">
+<span class="badge badge-default">User Feature.verify that admin should delete the user successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:15:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>verify that the logo display on homepage</a>
+<div class="">
+<span class="badge badge-default">Login feature.verify that the logo display on homepage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:15:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>verify the user should logout successfully</a>
+<div class="">
+<span class="badge badge-default">Login feature.verify the user should logout successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='21'>Admin should add user successfully</a>
+<div class="">
+<span class="badge badge-default">User Feature.Admin should add user successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='40'>search the user created and verify it</a>
+<div class="">
+<span class="badge badge-default">User Feature.search the user created and verify it</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@author_Manish</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@author_Manish</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:15:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>verify that the logo display on homepage</a>
+<div class="">
+<span class="badge badge-default">Login feature.verify that the logo display on homepage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:15:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>verify the user should logout successfully</a>
+<div class="">
+<span class="badge badge-default">Login feature.verify the user should logout successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='21'>Admin should add user successfully</a>
+<div class="">
+<span class="badge badge-default">User Feature.Admin should add user successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='40'>search the user created and verify it</a>
+<div class="">
+<span class="badge badge-default">User Feature.search the user created and verify it</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:16:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='55'>verify that admin should delete the user successfully</a>
+<div class="">
+<span class="badge badge-default">User Feature.verify that admin should delete the user successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>6</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchWindowException</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchWindowException</h4>
+<span status="fail" class='badge log badge-danger'>6 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:44 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='38'>Then I should saved user successfully</a>
+<div class="">
+<span class="badge badge-default">User Feature.Admin should add user successfully.Then I should saved user successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='39'>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">User Feature.Admin should add user successfully.com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='43'>When I enter email "Admin" in email field</a>
+<div class="">
+<span class="badge badge-default">User Feature.search the user created and verify it.When I enter email "Admin" in email field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:15:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='54'>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">User Feature.search the user created and verify it.com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:16:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='58'>When I enter email "Admin" in email field</a>
+<div class="">
+<span class="badge badge-default">User Feature.verify that admin should delete the user successfully.When I enter email "Admin" in email field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:16:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='73'>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">User Feature.verify that admin should delete the user successfully.com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
